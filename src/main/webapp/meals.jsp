@@ -9,7 +9,7 @@
 <hr>
 <h2>Meals</h2>
 
-<table border="2" align="center" style="border-collapse: collapse" >
+<table border="2" align="center" style="border-collapse: collapse">
     <thead>
     <tr>
         <td align="center">Date</td>
@@ -30,10 +30,10 @@
             </c:otherwise>
         </c:choose>
 
-        <tr>
-            <td><b style="color:${color}">${meal.date} ${meal.time}</b></td>
-            <td><b style="color:${color}">${meal.description}</b></td>
-            <td><b style="color:${color}">${meal.calories}</b></td>
+        <tr style="color: ${color}">
+            <td>${meal.date} ${meal.time}</td>
+            <td>${meal.description}</td>
+            <td>${meal.calories}</td>
         </tr>
     </c:forEach>
 

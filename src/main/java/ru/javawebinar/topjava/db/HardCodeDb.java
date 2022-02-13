@@ -4,12 +4,12 @@ import ru.javawebinar.topjava.model.Meal;
 
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class HardCodeDb {
-    private final static List<Meal> meals = new ArrayList<>();
+    private final static List<Meal> meals = new CopyOnWriteArrayList<>();
 
     static {
         Collections.addAll(meals,
