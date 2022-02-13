@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Meal {
+    public static final int caloriesPerDay = 2000;
+
     private final LocalDateTime dateTime;
 
     private final String description;
