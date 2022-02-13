@@ -9,12 +9,12 @@
 <hr>
 <h2>Meals</h2>
 
-<table border="2" align="center" style="border-collapse: collapse">
+<table border="3" align="center" style="border-collapse: collapse" cellspacing="5" cellpadding="5" >
     <thead>
-    <tr>
-        <td align="center">Date</td>
-        <td align="center">Description</td>
-        <td align="center">Calories</td>
+    <tr align="center">
+        <td>Date</td>
+        <td>Description</td>
+        <td>Calories</td>
     </tr>
     </thead>
 
