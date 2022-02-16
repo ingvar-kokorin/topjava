@@ -3,8 +3,11 @@ package ru.javawebinar.topjava.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class MealTo {
+    private Integer id;
+
     private final LocalDateTime dateTime;
 
     private final String description;
@@ -44,6 +47,14 @@ public class MealTo {
         return dateTime.toLocalTime();
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "MealTo{" +
@@ -52,5 +63,18 @@ public class MealTo {
                 ", calories=" + calories +
                 ", excess=" + excess +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MealTo)) return false;
+        MealTo mealTo = (MealTo) o;
+        return getCalories() == mealTo.getCalories() && isExcess() == mealTo.isExcess() && Objects.equals(getId(), mealTo.getId()) && Objects.equals(getDateTime(), mealTo.getDateTime()) && Objects.equals(getDescription(), mealTo.getDescription());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getDateTime(), getDescription(), getCalories(), isExcess());
     }
 }
