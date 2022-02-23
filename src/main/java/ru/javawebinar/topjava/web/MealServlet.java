@@ -35,9 +35,8 @@ public class MealServlet extends HttpServlet {
         if (action.equalsIgnoreCase("delete")) {
             int mealId = Integer.parseInt(req.getParameter("mealId"));
             dao.delete(mealId);
-
-            forward = LIST_MEALS;
-            req.setAttribute("meals", mealTo);
+            resp.sendRedirect("meals?action=listMeal");
+            return;
         } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
             int mealId = Integer.parseInt(req.getParameter("mealId"));
